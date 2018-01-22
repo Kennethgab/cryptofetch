@@ -13,8 +13,13 @@ BittrexHandler and CmcHandler currently fetch raw JSON information asynchronousl
 TODO:
 
 Documentation
+
 Diagrams
+
 Use cases for consumer
+
 architectural usecases
+
 tutorials/ recipes
+
 cmdline parser
