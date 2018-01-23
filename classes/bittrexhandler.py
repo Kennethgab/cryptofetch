@@ -11,9 +11,9 @@ import json
 class BittrexHandler:
 	def __init__(self):
 
-		self.user_agent = UserAgent()
+		
 		self.scraper = classes.fetch.async_scraper()
-		self.headers = constants.BITTREX_HEADER
+		
 
 
 
@@ -22,7 +22,7 @@ class BittrexHandler:
 
 		url = constants.BITTREX_CURRENCY
 
-		future = asyncio.ensure_future(self.scraper.run(symbols,url, self.headers, self.user_agent))
+		future = asyncio.ensure_future(self.scraper.run(symbols,url))
 
 		return await future
 
@@ -31,7 +31,7 @@ class BittrexHandler:
 
 		url = constants.BITTREX_GETCURRENCIES
 
-		future = asyncio.ensure_future(self.scraper.run(False, url, self.headers, self.user_agent))
+		future = asyncio.ensure_future(self.scraper.run(False, url))
 
 		return await future
 
@@ -39,7 +39,7 @@ class BittrexHandler:
 
 		url = constants.BITTREX_MARKETSUMMARY
 
-		future = asyncio.ensure_future(self.scraper.run(symbols, url, self.headers, self.user_agent))
+		future = asyncio.ensure_future(self.scraper.run(symbols, url))
 
 		return await future
 
@@ -48,14 +48,14 @@ class BittrexHandler:
 
 		url = constants.BITTREX_GETMARKETS
 
-		future = asyncio.ensure_future(self.scraper.run(False, url, self.headers, self.user_agent))
+		future = asyncio.ensure_future(self.scraper.run(False, url))
 
 		return await future
 
 	async def market_history(self, symbols):
 
 		url = constants.BITTREX_MARKETHISTORY
-		future = asyncio.ensure_future(self.scraper.run(symbols, url, self.headers, self.user_agent))
+		future = asyncio.ensure_future(self.scraper.run(symbols, url))
 
 		return await future
 
@@ -63,7 +63,7 @@ class BittrexHandler:
 	async def get_orderbook(self, symbols):
 
 		url = constants.BITTREX_ORDERBOOK
-		future = asyncio.ensure_future(self.scraper.run(symbols, url, self.headers, self.user_agent))
+		future = asyncio.ensure_future(self.scraper.run(symbols, url))
 		return await future
 
 
