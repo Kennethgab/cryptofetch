@@ -11,3 +11,5 @@ tested connections to GDAX, Bittrex, Coinmarketcap and bitfinex
 Encapsulate information fetched into a pandas dataframe
 
 clean up datatypes
+
+interfacing to sqlite
